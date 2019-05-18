@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600&display=swap");
+* {
+  font-family: "Montserrat";
+}
+
+.navbar {
+  background: #e9ecef;
+}
+
+.navbar .navbar-brand {
+  color: #875f9a !important;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.navbar .nav-link {
+  padding: 8px 14px !important;
+}
+
+.navbar .nav-link.active {
+  background-color: #875f9a;
+  color: white !important;
+  border-radius: 25px;
+}
+
+.navbar .nav-link.active .badge-purple {
+  background-color: white;
+  color: #875f9a;
+}
+
+.btn-outline-purple {
+  border-color: #875f9a;
+  color: #875f9a;
+}
+
+.btn-outline-purple:hover {
+  background-color: #875f9a;
+}
+
+.jumbotron {
+  min-height: calc(100vh - 68px);
+}
+
+.search {
+  max-width: 520px;
+  margin: auto;
+}
+
+.badge-purple {
+  background-color: #875f9a;
+  color: white;
+}
+
+.text-purple {
+  color: #875f9a !important;
+}
+
+.nav-tabs .nav-link {
+  color: #875f9a;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #e9ecef;
+  border-bottom-color: #e9ecef;
+}
+
+.btn-purple {
+  background-color: #875f9a;
+  color: white;
+  border-radius: 20px;
+  padding: 8px 14px;
+}
+
+.btn-purple:hover {
+  background-color: #5e426b;
+  color: white;
+}
+
+.table tr {
+  border-radius: 20px !important;
+}
+/*# sourceMappingURL=main.css.map */
