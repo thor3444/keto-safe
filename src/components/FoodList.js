@@ -19,8 +19,8 @@ const FoodList = props => {
 				{ query },
 				{
 					headers: {
-						"x-app-id": process.env.REACT_APP_APP_ID,
-						"x-app-key": process.env.REACT_APP_APP_KEY
+						"x-app-id": process.env.APP_ID,
+						"x-app-key": process.env.APP_KEY
 					}
 				}
 			)
