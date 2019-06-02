@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import { appId, appKey, nutrientsUrl } from "../config/keys";
+import { nutrientsUrl } from "../config/keys";
 import { FoodContext } from "../FoodContext";
 import axios from "axios";
 
 const Food = props => {
-	const [name, setName] = useState(props.match.params.name);
+	const [name] = useState(props.match.params.name);
 	const [loading, setLoading] = useState(false);
 	const [food, setFood] = useState({});
 	const [error, setError] = useState(null);
@@ -32,8 +32,8 @@ const Food = props => {
 				{ query: name },
 				{
 					headers: {
-						"x-app-id": appId,
-						"x-app-key": appKey
+						"x-app-id": process.env.REACT_APP_APP_ID,
+						"x-app-key": process.env.REACT_APP_APP_KEY
 					}
 				}
 			)

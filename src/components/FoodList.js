@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { appId, appKey, instantUrl } from "../config/keys";
+import { instantUrl } from "../config/keys";
 import axios from "axios";
 
 const FoodList = props => {
-	const [query, setQuery] = useState(props.match.params.query);
+	const [query] = useState(props.match.params.query);
 	const [loading, setLoading] = useState(false);
 	const [common, setCommon] = useState([]);
 	const [branded, setBranded] = useState([]);
@@ -19,8 +19,8 @@ const FoodList = props => {
 				{ query },
 				{
 					headers: {
-						"x-app-id": appId,
-						"x-app-key": appKey
+						"x-app-id": process.env.REACT_APP_APP_ID,
+						"x-app-key": process.env.REACT_APP_APP_KEY
 					}
 				}
 			)
@@ -95,7 +95,11 @@ const FoodList = props => {
 											>
 												<div className="row no-gutters">
 													<div className="col-4">
-														<img src={food.photo.thumb} height="50px" />
+														<img
+															src={food.photo.thumb}
+															height="50px"
+															alt={food.food_name}
+														/>
 													</div>
 													<div className="col-8 d-flex justify-content-center align-items-center">
 														<h5 className="card-title text-capitalize mb-0">
@@ -122,7 +126,11 @@ const FoodList = props => {
 											>
 												<div className="row no-gutters">
 													<div className="col-4 d-flex justify-content-center align-items-center">
-														<img src={food.photo.thumb} height="50px" />
+														<img
+															src={food.photo.thumb}
+															height="50px"
+															alt={food.food_name}
+														/>
 													</div>
 													<div className="col-8">
 														<h6 className="card-title text-capitalize mb-0 text-truncate">

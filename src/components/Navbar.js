@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { FoodContext } from "../FoodContext";
 
 const Navbar = () => {
-	const [foods, setFoods] = useContext(FoodContext);
+	const [foods] = useContext(FoodContext);
 
 	return (
 		<nav className="navbar navbar-light">

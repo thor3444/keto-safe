@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { FoodContext } from "../FoodContext";
 
 const List = props => {
-	const [list, setList] = useContext(FoodContext);
+	const [list] = useContext(FoodContext);
 
 	return (
 		<section className="jumbotron jumbotron-fluid mb-0 py-5">
