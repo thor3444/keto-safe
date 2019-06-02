@@ -11,6 +11,7 @@ const FoodList = props => {
 
 	useEffect(() => {
 		console.log(`Fetching ${query}`);
+		console.log(`${process.env.REACT_APP_ID}`);
 		setLoading(true);
 
 		axios
