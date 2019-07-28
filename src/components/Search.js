@@ -24,7 +24,6 @@ const Search = ({ history }) => {
 							placeholder="Search"
 							value={search}
 							onChange={e => setSearch(e.target.value)}
-							autoFocus={true}
 						/>
 						<div className="input-group-append">
 							<button
